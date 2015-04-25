@@ -1,0 +1,45 @@
+{% from "macros.html" import nav_link with context %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World Through Jinja</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      div#main {
+        max-width: 500px;
+        padding: 20px;
+      }
+      
+      nav .title {
+        font-weight: bold;
+      }
+      
+      a.active {
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <span class="title">Jinja! Hello World Name Generator</span>
+      <p>Select an identity and you shall be given a name:</p>
+      <ul class="nav navbar-nav">
+        {{ nav_link('human', 'Human') }}
+        {{ nav_link('jedi', 'Jedi') }}
+        {{ nav_link('digimon', 'Digimon') }}
+        {{ nav_link('pokemon', 'Pokemon') }}
+      </ul>
+    </nav>
+    <div id="main">
+      <br>
+      {% block content %}{% endblock %}
+      <br>
+    </div>
+    <footer>
+      {% block footer %}
+      <br>
+      <br>
+      {% endblock %}
+    </footer>
+  </body>
+</html>
