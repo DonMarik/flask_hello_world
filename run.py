@@ -67,7 +67,7 @@ def pokemon():
                         my_comment="You came out of the PokeBall as...",
                         my_object="pokemon",
                         my_name=pokemonname.title(),
-                        my_image="http://img4.wikia.nocookie.net/__cb20101020141551/pokemon/images/4/42/Gary's_Blastoise.png",
+                        my_image="https://pokemonaustralia.files.wordpress.com/2012/08/mew.png",
                         my_explain="Alternating the letters of your first and last name.",
                         current_time=datetime.datetime.now())
 
